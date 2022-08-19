@@ -5,7 +5,7 @@ import "./PopularTour.css";
 
 const PopularTour = () => {
     const [customers,setCustomers] = useState([]);
-    axios.get("https://nameless-savannah-22070.herokuapp.com/popular")
+    axios.get("https://blooming-escarpment-12355.herokuapp.com/popular")
     .then(res =>setCustomers(res.data))
     return (
         <div className="px-md-5 px-3 mx-md-4">
