@@ -1,20 +1,13 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import logo from "../../../images/logo.png";
 import useFirebase from './../../Firebase/useFirebase';
 import "./Header.css";
 
 
 const Header = () => {
-    const [logos, setLogos] = useState([]);
     const {users,logOut} = useFirebase();
-    // const [balisUrl,setBalisUrl] = useState({});
-    axios.get('https://nameless-savannah-22070.herokuapp.com/logo')
-    .then(res=>{
-        setLogos(res.data);
-        // console.log(res.data);
-    })
     
     return (
         <div>
@@ -23,17 +16,14 @@ const Header = () => {
             <Navbar bg="light" expand="lg" className="p-0">
                 <Container>
                 <Navbar.Brand href="#home">
-                {
-                        logos.map(logo => <img
-                            key={logo._id}
-                            alt=""
-                            src= {logo.img}
-                            width="100"
-                            height="60"
-                            className="d-inline-block align-top"
-                            /> )
-                            
-                    }
+                 <img
+                    key={logo._id}
+                    alt=""
+                    src= {logo}
+                    width="100"
+                    height="60"
+                    className="d-inline-block align-top"
+                    /> 
                 </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

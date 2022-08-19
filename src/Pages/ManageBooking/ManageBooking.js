@@ -5,12 +5,10 @@ import "./ManageBooking.css";
 
 const ManageBooking = () => {
     const [customers,setCustomers] = useState([]);
-    // const [singleCustomer,setSingleCustomer] = useState({});
-    axios.get("https://nameless-savannah-22070.herokuapp.com/manageBooking")
+    axios.get("http://localhost:5000/manageBooking")
     .then(res =>{
         setCustomers(res.data);
     })
-    // console.log(customers);
     return (
         <div>
             <h2 className="my-5">All Booking</h2>

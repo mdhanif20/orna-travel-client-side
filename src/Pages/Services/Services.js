@@ -15,7 +15,7 @@ const Services = () => {
     const [loading,setLoading] = useState(false);
     const {users} = useFirebase({});
     const serviceLoading = async() =>{
-      axios.get("https://nameless-savannah-22070.herokuapp.com/services")
+      axios.get("http://localhost:5000/service")
       .then(res =>{
           setServices(res.data);
       })
@@ -43,7 +43,8 @@ const Services = () => {
                           <div className="card-body">
                             <h5 className="card-title">{service.name}</h5>
                             <p className="card-text"><small className="text-muted">{service.time}</small></p>
-                            <p className="card-text">{service.desciption.slice(0,100)}....</p>
+                            <p className="card-text">{service?.desciption.slice(0,100)}....</p>
+                            
                             {
                               users.email? <Link to="/booking">
                               <button type="button" className="btn btn-primary border-0 rounded-0 fw-bolder">Book Now</button>

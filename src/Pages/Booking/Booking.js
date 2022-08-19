@@ -27,14 +27,12 @@ const Booking = () => {
             phoneRef.current.value="";
             addressRef.current.value="";
         }
-        axios.post("https://nameless-savannah-22070.herokuapp.com/booking",booking)
+        axios.post("http://localhost:5000/booking",booking)
         .then(res => {
            if(res.data.insertedId){
                alert("Your Booking Successful.");
                setCustomer(booking);
-                
                clearing();
-               
            }
         })
         e.preventDefault();
