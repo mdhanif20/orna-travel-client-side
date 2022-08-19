@@ -5,7 +5,7 @@ import "./Popular.css";
 const Popular = (props) => {
     const customer = props.customer;
     const {name,img,details,rating,time,totalPerson} = customer;
-    // console.log(customer);
+   
     return (
         <div className="card border-0 text-start">
         <img src={img} className="card-img-top w-100" id="popular-Img" alt="..."/>

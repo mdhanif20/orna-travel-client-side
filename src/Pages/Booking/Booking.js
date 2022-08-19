@@ -1,7 +1,5 @@
 import React, {useRef, useState} from 'react';
 import axios from 'axios';
-import MyOrder from '../MyOrders/MyOrder';
-// import { useState } from 'react';
 const Booking = () => {
     const[customer,setCustomer] = useState({});
     const nameRef = useRef();
@@ -27,7 +25,7 @@ const Booking = () => {
             phoneRef.current.value="";
             addressRef.current.value="";
         }
-        axios.post("http://localhost:5000/booking",booking)
+        axios.post("https://blooming-escarpment-12355.herokuapp.com/booking",booking)
         .then(res => {
            if(res.data.insertedId){
                alert("Your Booking Successful.");

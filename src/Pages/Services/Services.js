@@ -15,7 +15,7 @@ const Services = () => {
     const [loading,setLoading] = useState(false);
     const {users} = useFirebase({});
     const serviceLoading = async() =>{
-      axios.get("http://localhost:5000/service")
+      axios.get("https://blooming-escarpment-12355.herokuapp.com/service")
       .then(res =>{
           setServices(res.data);
       })

@@ -5,7 +5,7 @@ import "./ManageBooking.css";
 
 const ManageBooking = () => {
     const [customers,setCustomers] = useState([]);
-    axios.get("http://localhost:5000/manageBooking")
+    axios.get("https://blooming-escarpment-12355.herokuapp.com/manageBooking")
     .then(res =>{
         setCustomers(res.data);
     })

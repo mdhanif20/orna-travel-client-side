@@ -1,10 +1,7 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import * as ReactBootStrap from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "./Sliders.css";
-import { useEffect } from 'react';
 import img1 from "../../../images/slider/slide1.jpg";
 import img2 from "../../../images/slider/slider-2.jpg";
 import img3 from "../../../images/slider/slider.png";
