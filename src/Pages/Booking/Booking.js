@@ -25,7 +25,7 @@ const Booking = () => {
             phoneRef.current.value="";
             addressRef.current.value="";
         }
-        axios.post("https://blooming-escarpment-12355.herokuapp.com/booking",booking)
+        axios.post("https://orna-travels-server.onrender.com/booking",booking)
         .then(res => {
            if(res.data.insertedId){
                alert("Your Booking Successful.");

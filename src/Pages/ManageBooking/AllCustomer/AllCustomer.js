@@ -9,7 +9,7 @@ const AllCustomer = (props) => {
     const handleDeletUser = id =>{
         const proceed = window.confirm("Are you sure,You want to delet it?");
         if(proceed){
-            axios.delete(`https://blooming-escarpment-12355.herokuapp.com/manageBooking/${id}`)
+            axios.delete(`https://orna-travels-server.onrender.com/manageBooking/${id}`)
             .then(res=>{
                 // console.log(res);
             })

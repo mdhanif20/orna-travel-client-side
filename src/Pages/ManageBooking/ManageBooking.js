@@ -5,7 +5,7 @@ import "./ManageBooking.css";
 
 const ManageBooking = () => {
     const [customers,setCustomers] = useState([]);
-    axios.get("https://blooming-escarpment-12355.herokuapp.com/manageBooking")
+    axios.get("https://orna-travels-server.onrender.com/manageBooking")
     .then(res =>{
         setCustomers(res.data);
     })
